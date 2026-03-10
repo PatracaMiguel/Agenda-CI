@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  USER_NAME: "Tu Nombre"
+  USER_NAME: "PatracaMiguel"
 
 jobs:
   build-and-test:
