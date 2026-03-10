@@ -1,0 +1,28 @@
+name: CI Agenda
+
+on:
+  push:
+
+env:
+  USER_NAME: "Tu Nombre"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v5
+
+      - name: Configurar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Mensaje inicial
+        run: echo "Iniciando pruebas de la agenda de $USER_NAME"
+
+      - name: Compilar y probar
+        run: mvn clean test
