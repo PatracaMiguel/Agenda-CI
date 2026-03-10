@@ -25,4 +25,5 @@ jobs:
         run: echo "Iniciando pruebas de la agenda de $USER_NAME"
 
       - name: Compilar y probar
+        working-directory: demo
         run: mvn clean test
